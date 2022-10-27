@@ -1,23 +1,30 @@
 import { IoIosPaperPlane} from "react-icons/io";
 import { BsTelephoneFill} from "react-icons/bs";
+import { BsFillPersonFill} from "react-icons/bs";
+import { Outlet,NavLink } from "react-router-dom";
+
+
 
 const Header = () => {
     return ( 
     <header>
-        <div className="flex w-full h-5">
-        <div className="flex ">
-        <article className="flex">
-            <IoIosPaperPlane/>
-            <p>400@dinmaegler.com</p>
+        <div className="flex bg-primary h-16 py-4 ">
+        <div className="flex w-2/3 justify-center">
+        <article className="flex text-white">
+            <IoIosPaperPlane size={22}/>
+            <h3 className="pl-1 text-lg">400@dinmaegler.com</h3>
         </article>
-        <article className="flex">
-            <BsTelephoneFill/>
-            <p>+4570704000</p>
+        <article className="flex text-white pl-5">
+            <BsTelephoneFill size={22}/>
+            <h3 className="pl-1 text-lg">+4570704000</h3>
         </article>
         </div>
 
-        <div>
-        <article><button>Login</button></article>
+        <div className="flex w-1/3 justify-center">
+        <article className=" flex text-white">
+            <BsFillPersonFill size={26}/>
+            <NavLink to="/login" className="text-lg pl-2">Login</NavLink>
+        </article>
 
         </div>
         </div>
