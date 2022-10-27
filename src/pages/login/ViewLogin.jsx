@@ -9,11 +9,11 @@
 
 
 // import { useContext } from "react";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 // import TokenContext from "../Contexts/TokenContext";
 export default function SigIn() {
   // const { setToken } = useContext(TokenContext);
-  const navigate = Navigate;
+  // const navigate = Navigate;
 
   function submitHandler(event) {
     event.preventDefault();
