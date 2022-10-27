@@ -34,7 +34,7 @@ export default function SigIn() {
   return (
     <div className="flex h-screen w-full bg-backgroundImage bg-no-repeat bg-cover" onSubmit={submitHandler}>
       <div className="flex flex-col justify-center m-auto">
-          <form className="max-w-[400px] w-full mx-auto bg-green-900 p-8 px-14 rounded-lg">
+          <form className="max-w-[400px] w-full mx-auto bg-primary p-8 px-14 rounded-lg">
               <h2 className="text-2xl text-white font-bold text-center my-5">Sign in</h2>
                  <div>
                     <label className="text-white">Username

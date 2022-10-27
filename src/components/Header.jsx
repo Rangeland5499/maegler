@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
     return ( 
     <header>
-        <div className="flex bg-primary h-16 py-4 ">
+        <div className="flex bg-primary1 h-16 py-4 ">
         <div className="flex w-2/3 justify-center">
         <article className="flex text-white">
             <IoIosPaperPlane size={22}/>

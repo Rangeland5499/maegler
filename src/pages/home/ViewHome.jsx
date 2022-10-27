@@ -1,6 +1,11 @@
+import SearchSection from "./homeComponent/SearchSection";
+import Erfaring from "./homeComponent/SectionTwo";
 const Home = () => {
     return ( 
-        <div>Homepage</div>
+        <div>
+            <SearchSection/>
+            <Erfaring/>
+        </div>
      );
 }
  
