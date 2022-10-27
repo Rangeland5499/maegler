@@ -1,7 +1,7 @@
 import { IoIosPaperPlane} from "react-icons/io";
 import { BsTelephoneFill} from "react-icons/bs";
 import { BsFillPersonFill} from "react-icons/bs";
-import { Outlet,NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 
