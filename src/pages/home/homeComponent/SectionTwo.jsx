@@ -1,11 +1,14 @@
-import House from"../homeComponent/House.png";
-import ErfaringImage from"../homeComponent/ErfaringImage.png"
-import Group from"../homeComponent/Group.png";
+import House from"./homeImage/House.png";
+import ErfaringImage from"./homeImage/ErfaringImage.png"
+import Group from"./homeImage/Group.png";
+import SeprateLine from"./homeImage/SeprateLine.png";
+
 
 
 const Erfaring = () => {
     return ( 
-        <section className="flex justify-center m-auto mt-20">
+        <section >
+            <section className="flex justify-center m-auto mt-20">
             <article className="w-1/3" >
                 <img src={ErfaringImage} alt="" className="h-[502px] w-[477px]" />      
             </article>
@@ -21,7 +24,6 @@ const Erfaring = () => {
                     <p>4829</p>
                     <p>boliger solgt</p>
                 </article>
-               
                 </div>
                 <div className="flex">
                 <img src={Group} alt="" />
@@ -29,11 +31,13 @@ const Erfaring = () => {
                     <p>158</p>
                     <p>boliger til salg</p>
                 </article>
-               
                 </div>
                 </div>
             </article>
-            
+            </section>
+            <section className="flex my-16 justify-center ">
+                <img src={SeprateLine} alt="" />
+            </section>     
         </section>
      );
 }

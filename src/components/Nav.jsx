@@ -5,7 +5,10 @@ const Nav = () => {
     return ( 
         <nav className="flex w-full">
             <div className="flex justify-end w-5/12 h-12 my-3">
-            <img src={Logo} alt="logo" />
+                <NavLink to="/">
+                <img src={Logo} alt="logo" />
+                </NavLink>
+           
             </div>
             <div className="flex w-7/12 justify-center">
             <ul className="grid grid-cols-4 gap-5 justify-self-center text-lg pt-6">
