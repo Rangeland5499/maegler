@@ -4,7 +4,7 @@ import Tilmed from"./homeImage/Tilmed.png";
 
 const Info = () => {
     return ( 
-        <section className="flex w-3/5 justify-center justify-between m-auto">
+        <section className="flex w-3/5  justify-between m-auto pb-24">
         <article className="flex-col justify-center w-1/4">
             <div className="flex">
                 <img src={Bestil} alt="" />
