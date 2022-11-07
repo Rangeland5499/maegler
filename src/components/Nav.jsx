@@ -13,7 +13,7 @@ const Nav = () => {
             <div className="flex w-7/12 justify-center">
             <ul className="flex gap-6 text-lg pt-6">
                 <li className="transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110">
-                    <NavLink to="/houseSale">Boliger til salg</NavLink>
+                    <NavLink to="/">Boliger til salg</NavLink>
                 </li>
                 <li className="transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110">
                     <NavLink to="/employees">Mæglere</NavLink>
