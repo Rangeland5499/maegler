@@ -12,7 +12,7 @@ const SearchSection = () => {
                 <img src={Line} alt="" className="pl-7 pt-3" />
                 <h4 className="text-heading1 text-base pt-4 pl-7">Hvad skal din næste bolig indeholde</h4>
                 <div className="flex pl-7">
-                <input type="text" className="flex justify-center w-[728px] h-[48px] w-3/4 border border-gray-200"/>
+                <input type="text" className="flex justify-center  w-3/4 border border-gray-200"/>
                 <button className="bg-primary1 text-base w-[120px] h-[48px] ml-2">Søg</button>
                 </div>
             </section>

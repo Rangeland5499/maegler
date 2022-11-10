@@ -17,7 +17,7 @@ const Erfaring = () => {
                 <h6 className="text-[24px] pt-5 pb-3">Det synes vi siger noget om os!</h6>
                 <p className="text-[18px] pb-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has normal distribution.</p>
                 <p className="text-[18px] pb-10">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                <div className="flex w-full justify-between">
+                <div className="flex w-4/5 justify-between">
                 <div className="flex">
                 <img src={House} alt="" />
                 <article  className="pl-4">
