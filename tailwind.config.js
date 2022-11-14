@@ -14,7 +14,9 @@ module.exports = {
         "heading1":"rgba(42, 44, 48, 1)",
         "bg1":"rgba(248, 248, 251, 1)",
         "red":"rgba(221, 75, 57, 1)",
-        "blue":"rgba(59, 89, 153, 1)"
+        "blue":"rgba(59, 89, 153, 1)",
+        "lightBlue":"#EEF7FF",
+        "head2":"rgba(42, 44, 48, 1)"
         
       },
       fontSize: {
@@ -24,7 +26,10 @@ module.exports = {
         "xl":'20px',
         "h1":"50px",
         "h2":"38px",
-        "h5":"24px"
+        "h3":"60px",
+        "h4":"30px",
+        "h5":"24px",
+        
 
       }
     },
