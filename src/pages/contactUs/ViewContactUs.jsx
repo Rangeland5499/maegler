@@ -8,8 +8,8 @@ const ContactUs = () => {
     return ( 
     <section>
         <ContactImage/>
-        <section className="flex flex-cols-2 mt-20 w-5/6 justify-center mx-auto">
-        <section  className="w[730px] h-[1360px] border border-gray-200 p-6">
+        <section className="flex flex-cols-2 mt-20 w-1/3 justify-center mx-auto mb-20">
+        <section  className="w[730px] border border-gray-200 p-6">
         <About/>
         <ContactForm/>
         </section>

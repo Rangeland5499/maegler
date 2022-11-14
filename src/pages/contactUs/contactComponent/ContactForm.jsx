@@ -14,7 +14,7 @@ export default function ContactForm() {
   };
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className=" w-[650px] h-[740px] border border border-gray-200 py-12 ">
+    <form onSubmit={handleSubmit(onSubmit)} className=" w-[650px] border border border-gray-200 py-12 ">
        <div className="pl-10">
         <h4 className="font-bold text-lg">Kontakt Peter Sørensen</h4>
         <hr className="w-[60px] h-[4px] bg-primary1 mt-2 mb-4" />
