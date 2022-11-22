@@ -9,6 +9,7 @@ import Favorite from "./pages/favoriteHomes/ViewFavorite";
 import AllHome from "./pages/home/homeComponent/AllHomes";
 import HouseDetailes from "./pages/HouseDetail/ViewHouseDetailes";
 import Login from "./pages/login/ViewLogin";
+import SignUp from "./pages/login/loginComponent/SignUp";
 import Register from "./pages/registerUser/ViewRegisterUser";
 
 
@@ -26,6 +27,7 @@ function App() {
          <Route path="/allhome" element={<AllHome/>}></Route>
          <Route path="/houseDetailes" element={<HouseDetailes/>}></Route>
          <Route path="/login" element={<Login/>}></Route>
+         <Route path="/signup" element={<SignUp/>}></Route>
          <Route path="/register" element={<Register/>}></Route>
       </Route>
     </Routes>  

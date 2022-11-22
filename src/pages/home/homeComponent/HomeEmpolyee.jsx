@@ -27,7 +27,7 @@ const HomeEmployee = () => {
         </article>
 
         <section className="bg-bg1 pt-32">
-            <section className="grid grid-cols-2 grid-rows-2 gap-6 content-center w-1/2 mx-auto mt-20 ">
+            <section className="grid grid-cols-3 gap-6 content-center w-1/2 mx-auto  mt-20 mb-20 ">
             
             {content.map((item,id) => (
             <div key={item.id}>
@@ -37,7 +37,6 @@ const HomeEmployee = () => {
                 <p>{item.name}</p>
                 <p>{item.title}</p>
                 <p>{item.email}</p>
-                <p>{item.image}</p>
                 <p>{item.phone}</p>
                 
                 </article>

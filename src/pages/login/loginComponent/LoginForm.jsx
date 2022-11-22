@@ -2,32 +2,26 @@
 import { useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function SigIn(event) {
+export default function SigIn() {
   // event.preventDefault();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-      useEffect(() => {
+      // useEffect(() => {
          
-      fetch("https://dinmaegler.herokuapp.com/auth/local", {
-        "method": "POST",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-  
-        "body": {
-          "identifier": "maryam@mail.dk",
-          "password": "12345"
-        }
-      })
-        .then((response) => response.json())
-        .then((data) =>{
-          // localStorage.setItem(data, JSON.stringify(data));
-          // navigate("/favorite")
-
-        })
-        .catch((err) => console.error(err));
+        fetch("https://dinmaegler.herokuapp.com/auth/local", {
+                "method": "POST",
+                "headers": {
+                  "Content-Type": "application/json"
+                },
+                "body": {
+                  "identifier": "maryam@mail.dk",
+                  "password": "12345"
+                }
+              })
+              .then((res) => res.json())
+              .catch(err => console.error(err));
       
-      }, []);
+      // }, []);
 
 
   return (
@@ -64,7 +58,7 @@ export default function SigIn(event) {
                     </section>
                     <section className="flex justify-center mt-4 mb-6">
                       <p>Har du ikke en konto</p>
-                      <p className="text-blue"><Link>Operet burger</Link></p>
+                      <p className="text-blue"><Link to="/signUp">Operet burger</Link></p>
                     </section>
                   </section>
                  
