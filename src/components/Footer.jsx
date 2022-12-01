@@ -8,15 +8,15 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return ( <section>
-                <section className="bg-bg1 h-[560px] grid">
-                    <article className="col-start-2 col-span-4  pt-16 ">
+                <section className="bg-bg1 h-[560px] grid mt-0">
+                    <article className="col-start-2 col-span-4 pt-16 ">
                         <NavLink to="/">
                         <img src={Logo} alt="" />
 
                         </NavLink>
                         <p className="pt-3 text-lg">There are many variations of passages of Lorem Ipsum available, but the majority have<br/> suffered alteration in some form, by injected humour, or randomised words.</p>
                     </article>
-                    <article className="col-start-5  col-span-2 h-28" >
+                    <article className="col-start-5 col-span-2 h-28" >
                         <h6 className="font-bold">Quick Links</h6>
                         <ul className="flex-col h-[160px] justify-between ">
                             <li>

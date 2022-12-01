@@ -3,7 +3,9 @@ import Erfaring from "./homeComponent/SectionTwo";
 import Info from "./homeComponent/SectionThree";
 import SelectedHome from "./homeComponent/SelectedHome";
 import Newspaper from "./homeComponent/Newspaper";
-import HomeEmployee from "./homeComponent/HomeEmpolyee"
+import HomeEmployee from "./homeComponent/HomeEmpolyee";
+import GooglePlay from "./homeComponent/GooglePlay";
+
 const Home = () => {
     return ( 
         <div>
@@ -13,6 +15,7 @@ const Home = () => {
             <SelectedHome/>
             <Newspaper/>
             <HomeEmployee/>
+            <GooglePlay/>
 
         </div>
      );

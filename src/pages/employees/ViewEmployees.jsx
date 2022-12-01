@@ -8,6 +8,7 @@
 
 
 import { useEffect,useState} from "react";
+import EmployeesHeader from "./employeesComponenet/EmployeesHeader"
 
 
 
@@ -28,8 +29,8 @@ export default function Employees() {
 
   return (
       <div>
-            
-            <section className="bg-bg1 pt-32">
+            <EmployeesHeader/>
+            <section className="bg-white pb-20 pt-32">
             <article className="flex flex-col w-1/2 justify-center m-auto text-center" >
             <h2 className="text-h2 font-bold">Medarbejdere i Roskilde</h2>
             <p>There are many variations of passages of Lorem Ipsum available but the this in majority have suffered alteration in some</p>
@@ -39,7 +40,7 @@ export default function Employees() {
             {content.map((item,id) => (
             <div key={item.id}>
 
-              <article className="bg-white">
+              <article className="">
                 <img src={item.image} alt="" className="w-[540px] h-[225px]" />
                 <p>{item.name}</p>
                 <p>{item.title}</p>
