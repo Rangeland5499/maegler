@@ -2,10 +2,20 @@ import { IoIosPaperPlane} from "react-icons/io";
 import { BsTelephoneFill} from "react-icons/bs";
 import { BsFillPersonFill} from "react-icons/bs";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import TokenContext from "../Contexts/TokenContext";
+
 
 
 
 const Header = () => {
+    const { setToken } = useContext(TokenContext);
+
+    function signout() {
+        setToken(null);
+        localStorage.clear();
+        window.location.href = "/";
+      }
     return ( 
     <header>
         <div className="flex bg-primary1 h-16 py-4 ">
@@ -23,7 +33,7 @@ const Header = () => {
         <div className="flex w-1/3 justify-center">
         <article className=" flex text-white">
             <BsFillPersonFill size={26}/>
-            <NavLink to="/login" className="text-lg pl-2">Login</NavLink>
+           <button> <NavLink to="/login" className={({ isActive }) => (isActive ? 'logout' : 'login')} style={({isActive})=>{return{color:isActive?"white":""}}}>Login</NavLink></button>
         </article>
 
         </div>

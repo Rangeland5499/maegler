@@ -1,30 +1,52 @@
-import contact from "./contactImage/contact.png";
+// import contact from "./contactImage/contact.png";
+import { useEffect,useState} from "react";
+import { Link} from "react-router-dom";
+
+
 const About = () => {
+
+    const [content, setContent] = useState([]);
+
+    useEffect(() => {
+
+      fetch("https://dinmaegler.herokuapp.com/agents/6163fc0e2d07e63c24647d0c", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((response) => setContent(response))
+        .catch((err) => console.error(err));
+    }, []);
+
     return ( 
     <section >
         <section className="flex mb-10">
-        <img src={contact} alt="" />
-        <aside className="flex flex-col ml-8">
-            <h5 className="font-bold text-h5">Peter Sørensen</h5>
-            <h5>Statsautoriseret ejendomsmægler</h5>
+
+        {content.map((item,id) => (
+            <div key={item.id}>
+
+              <article className="bg-white">
+                <img src={item.image.url} alt="" className="w-[540px] h-[225px]" />
+                <aside className="flex flex-col ml-8">
+
+            <h5 className="font-bold text-h5">{item.name}</h5>
+            <h5>{item.title}</h5>
             <hr className="w-1/4 h-[2px] bg-primary1 my-4"/>
             <article className="flex">
-            +45 7070 4012
+            {item.phone}
             </article>
             <article className="flex">
-            peter@dinmaegler.com
+            {item.email}
             </article>
+            
+            </aside>
+            </article>
+            </div>
+             ))}
 
-        </aside>
         </section>
-        <section className="mb-10">
-            <h4 className="font-bold text-xl">Om Peter Sørensen</h4>
-            <hr className="w-[60px] h-[4px] bg-primary1 my-4" />
-            <p className="w-full text-justify">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-            <p className="w-full text-justify">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
-        </section>
-
-
     </section> );
 }
  

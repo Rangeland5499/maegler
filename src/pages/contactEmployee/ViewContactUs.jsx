@@ -4,7 +4,7 @@ import CallUs from "./contactComponent/CallUs";
 import ContactForm from "./contactComponent/ContactForm";
 import About from "./contactComponent/About";
 
-const contactEmployee = () => {
+const ContactUs = () => {
     return ( 
     <section>
         <ContactImage/>
@@ -23,4 +23,4 @@ const contactEmployee = () => {
     </section> );
 }
  
-export default contactEmployee;
+export default ContactUs;

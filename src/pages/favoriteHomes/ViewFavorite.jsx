@@ -48,7 +48,7 @@ export default function Favorite() {
             <div key={item.id}>
 
               <article className="bg-white">
-                <img src={item.images[0].url} alt="" className="w-[540px] h-[225px]" />
+                {/* <img src={item.images[0].url} alt="" className="w-[540px] h-[225px]" />
                 <p>{item.adress1}</p>
                 <div className="flex">
                 <p>{item.postalcode}</p>
@@ -56,7 +56,8 @@ export default function Favorite() {
                 </div>
                 <p>{item.type}</p><span>.</span>
                 <p>{item.gross}</p>
-                <p>{item.energylabel}</p>
+                <p>{item.energylabel}</p> */}
+                {content}
                 </article>
             </div>
              ))}

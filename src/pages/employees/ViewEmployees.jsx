@@ -1,14 +1,8 @@
-// const Employees = () => {
-//     return ( 
-//         <div>employees page</div>
-//      );
-// }
- 
-// export default Employees;
-
 
 import { useEffect,useState} from "react";
-import EmployeesHeader from "./employeesComponenet/EmployeesHeader"
+import { Link} from "react-router-dom";
+import EmployeesHeader from "./employeesComponenet/EmployeesHeader";
+import Person from "../contactEmployee/contactComponent/Person";
 
 
 
@@ -39,15 +33,20 @@ export default function Employees() {
             
             {content.map((item,id) => (
             <div key={item.id}>
+            
+
 
               <article className="">
-                <img src={item.image} alt="" className="w-[540px] h-[225px]" />
+              <Link to={"/person"} >
+                <img src={item.image.url} alt="" className="w-[400px] h-[200px]" />
+              </Link>
                 <p>{item.name}</p>
                 <p>{item.title}</p>
                 <p>{item.email}</p>
                 <p>{item.phone}</p>
                 
                 </article>
+                
             </div>
              ))}
             </section>  

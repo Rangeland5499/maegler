@@ -35,7 +35,7 @@ const HomeEmployee = () => {
             <div key={item.id}>
 
               <article className="bg-white">
-                <img src={item.image} alt="" className="w-[540px] h-[225px]" />
+                <img src={item.image.url} alt="" className="w-[540px] h-[225px]" />
                 <p>{item.name}</p>
                 <p>{item.title}</p>
                 <p>{item.email}</p>

@@ -1,37 +1,42 @@
 
-import { useEffect} from "react";
+// import { useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
+// import { useState } from "react";
+import { useContext } from "react";
+import { Navigate } from "react-router-dom";
+import TokenContext from "../../../Contexts/TokenContext";
 
-export default function SigIn() {
-  // event.preventDefault();
-  // const navigate = useNavigate();
-
-      // useEffect(() => {
-         
-        fetch("https://dinmaegler.herokuapp.com/auth/local", {
-                "method": "POST",
-                "headers": {
-                  "Content-Type": "application/json"
-                },
-                "body": {
-                  "identifier": "maryam@mail.dk",
-                  "password": "12345"
-                }
-              })
-              .then((res) => res.json())
-              .catch(err => console.error(err));
-      
-      // }, []);
-
+export default function SignIn() {
+  const { setToken } = useContext(TokenContext);
+  const navigate = Navigate;
+  function submitHandler(event) {
+    event.preventDefault();
+    fetch("https://dinmaegler.herokuapp.com/auth/local", {
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+            "identifier": "maryam@mail.dk",
+            "password": "12345"
+          }
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setToken(data.token);
+        localStorage.setItem("token", data.token);
+        navigate("/favorite");
+      });
+  }
 
   return (
-    <div className="flex" onSubmit={SigIn}>
+    <div className="flex" onSubmit={submitHandler}>
       <div className="flex flex-col justify-center m-auto w-2/5 mt-16 mb-16">
           <form className="bg-primary w-full p-8 px-14 border border-slate-200 shadow-lg">
               <h2 className="text-2xl font-bold text-center my-5">Log ind på din konto</h2>
                  <div className="flex justify-center">
                     <label className="flex flex-col mb-6 w-4/5 ">Email
-                    <input  className=" from-slate-400 border border-slate-400 pl-2 py-1.5" type="text" name="username" placeholder="Email" />
+                    <input  className=" from-slate-400 border border-slate-400 pl-2 py-1.5" type="email" name="username" id="email" placeholder="Email" />
                     </label>
                   </div>
                   <div className="flex justify-center">
@@ -46,7 +51,7 @@ export default function SigIn() {
                   
                   <div className="flex justify-center">
                     
-                  <button className="text-white text border w-4/5 mt-1 px-10 py-1.5 hover:font-bold bg-primary1" type="submit">Log ind</button>
+                  <button className="text-white text border w-4/5 mt-1 px-10 py-1.5 hover:font-bold bg-primary1" type="submit" >Log ind</button>
 
                   </div>
                   <section className="mt-10 ">
